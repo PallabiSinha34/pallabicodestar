@@ -14,23 +14,24 @@ stages:
       - bash: echo Build Second Job
 - stage: DevDeploy
   variables:
-    environment: ps
+    pallabi: ps
   dependsOn: Build
   jobs:
     - job: DevFist
       steps:
-      - bash: echo $(environment)DeployJob
+      - bash: echo $(pallabi)DeployJob
     - job: DevSeccond
       steps:
       - bash: echo Dev Second Job
 - stage: QADeploy
   variables:
+   pallabi:
      environment: 
   dependsOn: Build
   jobs:
     - job: QAJob
       steps:
-      - bash: echo $(environment)QADeploy
+      - bash: echo $(pallabi)QADeploy
 - stage: ProdDeploy
   dependsOn:
   - DevDeploy
@@ -38,4 +39,4 @@ stages:
   jobs:
     - job: ProductionsJob
       steps:
-      - bash: echo $(environment)ProdDeploy
+      - bash: echo $(pallabi)ProdDeploy
