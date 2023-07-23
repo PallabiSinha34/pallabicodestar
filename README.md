@@ -58,7 +58,7 @@ project pipeline and deployed to AWS Lambda and Amazon API Gateway. (You can wat
 progress on your AWS CodeStar project dashboard.)Once you've seen how that works,
 start developing your own code, and have fun!
 
-To run your tests locally, go to the root directory of the
+To run1 your tests locally, go to the root directory of the
 sample code and run the `python -m unittest discover tests` command, which
 AWS CodeBuild also runs through your `buildspec.yml` file.
 
