@@ -26,7 +26,6 @@ stages:
 - stage: QADeploy
   variables:
    pallabi:
-     environment: 
   dependsOn: Build
   jobs:
     - job: QAJob
